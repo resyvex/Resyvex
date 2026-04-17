@@ -1,3 +1,0 @@
-"# Resyvex" 
-"# Resyvex" 
-"# Resyvex" 
