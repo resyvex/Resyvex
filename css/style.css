@@ -52,25 +52,30 @@ header {
     max-width: 1600px;
     width: 100%;
     margin: 0 auto;
-    padding: 1rem 3rem;
+    padding: 0.75rem 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: 60px;
 }
 
 .logo {
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: var(--text-dark);
-    text-decoration: none;
-    letter-spacing: -0.03em;
+    display: block;
+}
+
+.logo img {
+    height: 1.75rem;
+    width: auto;
+    max-width: 140px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 2rem;
-    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    align-items: center;
 }
 
 nav ul li a {
@@ -395,15 +400,28 @@ p {
    TESTIMONIALS
    ========================================== */
 
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
 .testimonial {
     background: #faf9f7;
     border-left: 4px solid var(--secondary-color);
     padding: 1.8rem;
-    margin-bottom: 1.5rem;
     border-radius: 1.25rem;
     opacity: 0;
     transform: translateY(18px);
     animation: fadeInUp 0.9s ease forwards;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    transition: var(--transition);
+}
+
+.testimonial:hover {
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
 }
 
 .testimonial:nth-of-type(1) {
@@ -422,12 +440,14 @@ p {
     font-style: italic;
     margin-bottom: 0.75rem;
     color: #2c2c2c;
+    line-height: 1.6;
 }
 
 .testimonial-author {
     color: var(--primary-color);
     font-weight: 600;
     font-size: 0.95rem;
+    text-align: right;
 }
 
 /* ==========================================
@@ -706,6 +726,8 @@ footer {
     .footer-container {
         padding-left: 2rem;
         padding-right: 2rem;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
     }
 
     section {
@@ -731,7 +753,7 @@ footer {
     }
 
     .header-container {
-        padding: 1rem 1.5rem;
+        padding: 0.75rem 1.5rem;
         position: relative;
     }
 
@@ -806,6 +828,11 @@ footer {
     }
 
     .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .testimonials-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
