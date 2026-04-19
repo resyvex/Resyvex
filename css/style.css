@@ -617,7 +617,7 @@ ul li strong, ol li strong {
 
 footer {
     background: #111111;
-    color: #ffffff;
+    color: #ffffff; 
     padding: 3rem 2rem;
     margin-top: 4rem;
 }
@@ -671,6 +671,7 @@ footer {
     padding-top: 2rem;
     text-align: center;
     font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* ==========================================
