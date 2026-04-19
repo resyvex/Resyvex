@@ -155,7 +155,7 @@
             <h2>Apply for a Role</h2>
             <p>Interested in joining Resyvex? Submit your application below. We review all applications and reach out to promising candidates.</p>
             
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="max-width: 700px; margin-top: 2rem;">
+            <form id="careerForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="max-width: 700px; margin-top: 2rem;">
                 <div class="form-group">
                     <label for="name">Full Name *</label>
                     <input type="text" id="name" name="name" required>
@@ -175,12 +175,11 @@
                     <label for="role">Role of Interest *</label>
                     <select id="role" name="role" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 0.4rem; font-family: inherit; font-size: 1rem;">
                         <option value="">Select a role</option>
-                        <option value="trainer">Electronics & Embedded Systems Trainer</option>
-                        <option value="engineer">Project Development Engineer</option>
-                        <option value="coach">Career Coach & Placement Lead</option>
-                        <option value="content">Content & Curriculum Developer</option>
-                        <option value="operations">Operations & Program Coordinator</option>
-                        <option value="sales">Sales & Partnership Manager</option>
+                        <option value="project-intern-ece">Project Intern – ECE</option>
+                        <option value="embedded-systems-trainee">Embedded Systems Trainee</option>
+                        <option value="pcb-design-trainee">PCB Design Trainee</option>
+                        <option value="technical-content">Technical Content and Documentation Assistant</option>
+                        <option value="software-web-intern">Software / Web Development Intern</option>
                         <option value="other">Other</option>
                     </select>
                 </div>
@@ -270,5 +269,27 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script>
+        document.getElementById('careerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            fetch(this.action, {
+                method: 'POST',
+                body: new FormData(this),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    document.getElementById('careerForm').reset();
+                    alert('Thank you! Your application has been submitted successfully.');
+                } else {
+                    alert('There was an error submitting your application. Please try again.');
+                }
+            }).catch(error => {
+                console.error('Error:', error);
+                alert('There was an error submitting your application. Please try again.');
+            });
+        });
+    </script>
 </body>
 </html>
