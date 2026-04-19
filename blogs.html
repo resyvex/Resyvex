@@ -35,42 +35,83 @@
 
     <!-- MAIN CONTENT -->
     <main>
-        <section class="hero-section">
-            <div class="container">
-                <h1><span style="color: var(--secondary-color);">Resy</span><span style="color: var(--primary-color);">vex</span> Blogs</h1>
-                <p>Stay updated with the latest insights, trends, and stories from the world of technology and education.</p>
-            </div>
+        <!-- HERO SECTION -->
+        <section id="hero" style="background: radial-gradient(circle at top right, rgba(214, 40, 40, 0.14), transparent 24%), radial-gradient(circle at left center, rgba(17, 17, 17, 0.06), transparent 18%), #ffffff; color: var(--text-dark); padding: 8rem 4rem 7rem; text-align: center;">
+            <h1><span style="color: var(--secondary-color);">Resy</span><span style="color: var(--primary-color);">vex</span> Blogs</h1>
+            <p style="color: #2e2e2e; font-size: clamp(1.1rem, 1.4vw, 1.4rem); max-width: 760px; margin: 0 auto 2.5rem;">Stay updated with the latest insights, trends, and stories from the world of technology and education.</p>
         </section>
 
-        <section class="blogs-section">
-            <div class="container">
-                <div class="blog-post">
-                    <div class="blog-image">
-                        <img src="images/blog-example.jpg" alt="Example Blog Image">
+        <!-- BLOG POSTS GRID -->
+        <section>
+            <h2 style="text-align: center; margin-bottom: 3rem;">Latest Articles</h2>
+
+            <div class="cards-grid" style="max-width: 1200px; margin: 0 auto;">
+                <!-- BLOG POST 1 -->
+                <div class="card" style="cursor: pointer;" onclick="window.location.href='blogs/future-of-practical-tech-education.html'">
+                    <div style="height: 200px; overflow: hidden; border-radius: 0.5rem 0.5rem 0 0;">
+                        <img src="images/resyvvex pro.jpeg" alt="Practical Tech Education" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
-                    <div class="blog-content">
-                        <h2>The Future of Practical Tech Education</h2>
-                        <p class="blog-meta">Published on April 18, 2026 by Resyvex Team</p>
-                        <p>In today's rapidly evolving technological landscape, practical education has become more crucial than ever. At Resyvex, we believe that hands-on learning is the key to preparing students for real-world challenges.</p>
-                        <p>Our approach combines theoretical knowledge with practical application, ensuring that learners not only understand concepts but can also implement them effectively. This methodology has proven successful in bridging the gap between academic learning and industry requirements.</p>
-                        <p>As we look to the future, we're excited about the possibilities that emerging technologies bring to education. From AI-powered learning platforms to immersive virtual reality training, the opportunities for enhanced learning experiences are endless.</p>
-                        <p>Join us as we continue to innovate and provide cutting-edge education solutions that empower the next generation of tech professionals.</p>
+                    <div style="padding: 1.5rem;">
+                        <div style="margin-bottom: 0.75rem;">
+                            <span style="background: var(--secondary-color); color: white; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">TECHNOLOGY EDUCATION</span>
+                        </div>
+                        <h3 style="color: var(--primary-color); margin-bottom: 0.75rem; font-size: 1.25rem;">The Future of Practical Tech Education</h3>
+                        <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 1rem; line-height: 1.5;">In today's rapidly evolving technological landscape, practical education has become more crucial than ever. At Resyvex, we believe that hands-on learning is the key to preparing students for real-world challenges.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="color: var(--text-light); font-size: 0.85rem;">April 18, 2026</span>
+                            <span style="color: var(--secondary-color); font-weight: 600; font-size: 0.85rem;">Read More →</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="blog-post">
-                    <div class="blog-image">
-                        <img src="images/blog-tech-trends.jpg" alt="Tech Trends Blog Image">
+                <!-- BLOG POST 2 -->
+                <div class="card" style="cursor: pointer;" onclick="window.location.href='blogs/emerging-tech-trends-2026.html'">
+                    <div style="height: 200px; overflow: hidden; border-radius: 0.5rem 0.5rem 0 0;">
+                        <img src="images/resyvex in.jpeg" alt="Tech Trends 2026" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
-                    <div class="blog-content">
-                        <h2>Emerging Tech Trends in 2026</h2>
-                        <p class="blog-meta">Published on April 15, 2026 by Tech Insights Team</p>
-                        <p>The year 2026 is shaping up to be a pivotal time for technology innovation. From quantum computing breakthroughs to advanced AI applications, the tech landscape is transforming at an unprecedented pace.</p>
-                        <p>One of the most exciting developments is the integration of AI and machine learning into everyday business processes. Companies are leveraging these technologies to optimize operations, enhance customer experiences, and drive innovation.</p>
-                        <p>Additionally, the rise of edge computing and 5G networks is enabling real-time data processing and analysis, opening new possibilities for IoT applications and smart city initiatives.</p>
-                        <p>At Resyvex, we're committed to staying at the forefront of these trends, ensuring our students are equipped with the skills needed to thrive in this dynamic environment.</p>
+                    <div style="padding: 1.5rem;">
+                        <div style="margin-bottom: 0.75rem;">
+                            <span style="background: var(--primary-color); color: white; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">TECH TRENDS</span>
+                        </div>
+                        <h3 style="color: var(--primary-color); margin-bottom: 0.75rem; font-size: 1.25rem;">Emerging Tech Trends in 2026</h3>
+                        <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 1rem; line-height: 1.5;">The year 2026 is shaping up to be a pivotal time for technology innovation. From quantum computing breakthroughs to advanced AI applications, the tech landscape is transforming at an unprecedented pace.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="color: var(--text-light); font-size: 0.85rem;">April 15, 2026</span>
+                            <span style="color: var(--secondary-color); font-weight: 600; font-size: 0.85rem;">Read More →</span>
+                        </div>
                     </div>
                 </div>
+
+                <!-- COMING SOON PLACEHOLDER -->
+                <div class="card" style="opacity: 0.7; cursor: not-allowed;">
+                    <div style="height: 200px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 0.5rem 0.5rem 0 0; display: flex; align-items: center; justify-content: center;">
+                        <div style="text-align: center; color: var(--text-light);">
+                            <div style="font-size: 3rem; margin-bottom: 0.5rem;">📝</div>
+                            <div style="font-size: 1.2rem; font-weight: 600;">Coming Soon</div>
+                        </div>
+                    </div>
+                    <div style="padding: 1.5rem;">
+                        <div style="margin-bottom: 0.75rem;">
+                            <span style="background: #6c757d; color: white; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">UPCOMING</span>
+                        </div>
+                        <h3 style="color: var(--primary-color); margin-bottom: 0.75rem; font-size: 1.25rem;">More Articles Coming Soon</h3>
+                        <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 1rem; line-height: 1.5;">We're working on exciting new content about engineering careers, project management, and industry insights. Stay tuned!</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="color: var(--text-light); font-size: 0.85rem;">Coming Soon</span>
+                            <span style="color: #6c757d; font-weight: 600; font-size: 0.85rem;">Subscribe →</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NEWSLETTER SUBSCRIPTION -->
+            <div style="text-align: center; margin-top: 4rem; padding: 3rem; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 0.75rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Stay Updated</h3>
+                <p style="color: var(--text-light); margin-bottom: 1.5rem;">Subscribe to our newsletter and never miss a new article or industry insight.</p>
+                <form style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <input type="email" placeholder="Enter your email" style="padding: 0.75rem 1rem; border: 1px solid var(--border-color); border-radius: 0.4rem; flex: 1; min-width: 250px;">
+                    <button type="submit" class="btn btn-primary" style="padding: 0.75rem 1.5rem;">Subscribe</button>
+                </form>
             </div>
         </section>
     </main>
