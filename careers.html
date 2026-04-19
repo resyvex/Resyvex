@@ -155,67 +155,77 @@
             <h2>Apply for a Role</h2>
             <p>Interested in joining Resyvex? Submit your application below. We review all applications and reach out to promising candidates.</p>
             
-            <form id="careerForm" action="https://formspree.io/f/mwvabjbq" method="POST" style="max-width: 700px; margin-top: 2rem;">
-                <div class="form-group">
-                    <label for="name">Full Name *</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
+            <div class="two-col" style="margin-top: 2rem; align-items: flex-start;">
+                <div>
+                    <form id="careerForm" action="https://formspree.io/f/mwvabjbq" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
 
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
 
-                <div class="form-group">
-                    <label for="phone">Phone Number *</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
 
-                <div class="form-group">
-                    <label for="role">Role of Interest *</label>
-                    <select id="role" name="role" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 0.4rem; font-family: inherit; font-size: 1rem;">
-                        <option value="">Select a role</option>
-                        <option value="project-intern-ece">Project Intern – ECE</option>
-                        <option value="embedded-systems-trainee">Embedded Systems Trainee</option>
-                        <option value="pcb-design-trainee">PCB Design Trainee</option>
-                        <option value="technical-content">Technical Content and Documentation Assistant</option>
-                        <option value="software-web-intern">Software / Web Development Intern</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
+                        <div class="form-group">
+                            <label for="role">Role of Interest *</label>
+                            <select id="role" name="role" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 0.4rem; font-family: inherit; font-size: 1rem;">
+                                <option value="">Select a role</option>
+                                <option value="project-intern-ece">Project Intern – ECE</option>
+                                <option value="embedded-systems-trainee">Embedded Systems Trainee</option>
+                                <option value="pcb-design-trainee">PCB Design Trainee</option>
+                                <option value="technical-content">Technical Content and Documentation Assistant</option>
+                                <option value="software-web-intern">Software / Web Development Intern</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
 
-                <div class="form-group">
-                    <label for="experience">Years of Relevant Experience *</label>
-                    <input type="text" id="experience" name="experience" placeholder="e.g., 3 years in embedded systems" required>
-                </div>
+                        <div class="form-group">
+                            <label for="experience">Years of Relevant Experience *</label>
+                            <input type="text" id="experience" name="experience" placeholder="e.g., 3 years in embedded systems" required>
+                        </div>
 
-                <div class="form-group">
-                    <label for="background">Your Background & Professional Summary *</label>
-                    <textarea id="background" name="background" placeholder="Tell us about your experience, skills, and key achievements" required></textarea>
-                </div>
+                        <div class="form-group">
+                            <label for="background">Your Background & Professional Summary *</label>
+                            <textarea id="background" name="background" placeholder="Tell us about your experience, skills, and key achievements" required></textarea>
+                        </div>
 
-                <div class="form-group">
-                    <label for="why">Why are you interested in Resyvex? *</label>
-                    <textarea id="why" name="why" placeholder="What excites you about this role and our mission?" required></textarea>
-                </div>
+                        <div class="form-group">
+                            <label for="why">Why are you interested in Resyvex? *</label>
+                            <textarea id="why" name="why" placeholder="What excites you about this role and our mission?" required></textarea>
+                        </div>
 
-                <div class="form-group">
-                    <label for="portfolio">Portfolio / Resume Link</label>
-                    <input type="url" id="portfolio" name="portfolio" placeholder="https://yourportfolio.com or LinkedIn profile">
-                </div>
+                        <div class="form-group">
+                            <label for="portfolio">Portfolio / Resume Link</label>
+                            <input type="url" id="portfolio" name="portfolio" placeholder="https://yourportfolio.com or LinkedIn profile">
+                        </div>
 
-                <div class="form-group">
-                    <label for="location">Location / Availability</label>
-                    <input type="text" id="location" name="location" placeholder="Your current location and availability">
-                </div>
+                        <div class="form-group">
+                            <label for="location">Location / Availability</label>
+                            <input type="text" id="location" name="location" placeholder="Your current location and availability">
+                        </div>
 
-                <div class="form-group">
-                    <label for="additional">Anything else we should know?</label>
-                    <textarea id="additional" name="additional" placeholder="Awards, projects, relevant experiences, or questions..."></textarea>
-                </div>
+                        <div class="form-group">
+                            <label for="additional">Anything else we should know?</label>
+                            <textarea id="additional" name="additional" placeholder="Awards, projects, relevant experiences, or questions..."></textarea>
+                        </div>
 
-                <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1rem; padding: 0.9rem;">Submit Application</button>
-            </form>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1rem; padding: 0.9rem;">Submit Application</button>
+                    </form>
+                </div>
+                
+                <div class="highlight" style="text-align: center;">
+                    <img src="images/career.png" alt="Join the Resyvex Team" style="width: 80%; height: auto; border-radius: 0.75rem; box-shadow: var(--shadow-md);">
+                    <h3 style="margin-top: 1rem; color: var(--primary-color);">Join Our Mission</h3>
+                    <p style="color: var(--text-light); font-size: 0.9rem;">Be part of a team that's transforming engineering education</p>
+                </div>
+            </div>
 
             <p style="font-size: 0.9rem; color: var(--text-light); margin-top: 1rem;">✓ We review applications regularly. Promising candidates will be contacted within 5-7 days. We appreciate your interest in Resyvex!</p>
         </section>
