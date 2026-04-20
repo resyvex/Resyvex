@@ -137,3 +137,75 @@ function highlightActiveNav() {
 
 // Call on page load
 highlightActiveNav();
+
+
+
+
+
+
+
+
+
+        const googleScriptURLcontact = "https://script.google.com/macros/s/AKfycbzSPxDw16GWhLoMtM0dtMlVnAePgeDT_g-DlqkyuaXRNYSf_OKoAcwu8AjNqLaHbYgr4w/exec";
+        const formServiceURLcontact = "https://formspree.io/f/xdaygawe";
+
+        document.getElementById("contactform").addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(e.target);
+
+        try {
+            // Send to Google Sheets
+            await fetch(googleScriptURLcontact, {
+            method: "POST",
+            body: formData
+            });
+
+            // Send to Form Service
+            await fetch(formServiceURLcontact, {
+            method: "POST",
+            body: formData
+            });
+
+            alert("Message sent successfully!");
+            e.target.reset();
+
+        } catch (error) {
+            console.error(error);
+            console.log("Error sending message.");
+        }
+        });
+
+
+
+
+
+// const googleScriptURLcareer = "https://script.google.com/macros/s/AKfycbzIfqyXqRibsW4XZ3HUtJk4JMXpSDuLk2GsP_EaXWwzMl4ICf8Vwz99iOCo15mQdk4/exec";
+// const formServiceURLcareer = "https://formspree.io/f/mwvabjbq";
+
+// document.getElementById("careerform").addEventListener("submit", async (w) => {
+// w.preventDefault();
+
+// const formDatacareer = new FormData(w.target);
+
+// try {
+// 	// Send to Google Sheets
+// 	await fetch(googleScriptURLcareer, {
+// 	method: "POST",
+// 	body: formDatacareer
+// 	});
+
+// 	// Send to Form Service
+// 	await fetch(formServiceURLcareer, {
+// 	method: "POST",
+// 	body: formDatacareer
+// 	});
+
+//     alert("Message sent successfully!");
+//     e.target.reset();
+
+// } catch (error) {
+//     console.error(error);
+//     console.log("Error sending message.");
+// }
+// });

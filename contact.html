@@ -46,7 +46,7 @@
             
             <div class="two-col" style="margin-top: 2rem; align-items: flex-start;">
                 <div>
-                    <form action="https://formspree.io/f/xdaygawe" method="POST">
+                    <form id="contactform" target="hidden_iframe" >
                         <div class="form-group">
                             <label for="name">Your Name *</label>
                             <input type="text" id="name" name="name" required>
@@ -81,6 +81,7 @@
 
                         <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1rem; padding: 0.9rem;">Send Enquiry</button>
                     </form>
+                    <iframe name="hidden_iframe" style="display:none;"></iframe>
                 </div>
                 
                 <div class="highlight" style="text-align: center;">
@@ -167,6 +168,8 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js">
+
+    </script>
 </body>
 </html>
