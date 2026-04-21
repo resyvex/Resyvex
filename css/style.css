@@ -299,18 +299,18 @@ p {
 
 .card {
     background: #ffffff;
-    border: 1px solid rgba(17, 17, 17, 0.08);
+    border: 2px solid rgba(17, 17, 17, 0.08);
     border-radius: 1.25rem;
     padding: 2rem;
     transition: var(--transition);
-    box-shadow: 0 12px 35px rgba(17, 17, 17, 0.05);
+    box-shadow: 1 20px 45px rgba(17, 17, 17, 0.05);
     opacity: 0;
     transform: translateY(18px);
     animation: fadeInUp 0.9s ease forwards;
 }
 
 .card:hover {
-    box-shadow: 0 20px 45px rgba(17, 17, 17, 0.08);
+    box-shadow: 0 30px 55px rgba(17, 17, 17, 0.08);
     transform: translateY(-3px);
 }
 
