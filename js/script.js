@@ -138,6 +138,139 @@ function highlightActiveNav() {
 // Call on page load
 highlightActiveNav();
 
+/* ==========================================
+   CONTACT FORM - SUCCESS & RESET
+   ========================================== */
+
+// Handle contact form submission
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactform');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            const submitBtn = this.querySelector('button[type="submit"]');
+            
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending...';
+            }
+            
+            // After form submits to Google Sheets via hidden iframe
+            setTimeout(() => {
+                // Show success message
+                const successMsg = document.getElementById('successMsg');
+                if (successMsg) {
+                    successMsg.style.display = 'block';
+                }
+                
+                // Reset form
+                this.reset();
+                
+                // Re-enable submit button
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Send Enquiry';
+                }
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    if (successMsg) {
+                        successMsg.style.display = 'none';
+                    }
+                }, 5000);
+            }, 800);
+        });
+    }
+});
+
+/* ==========================================
+   CAREER FORM - SUCCESS & RESET
+   ========================================== */
+
+document.addEventListener('DOMContentLoaded', function() {
+    const careerForm = document.getElementById('careerform');
+    
+    if (careerForm) {
+        careerForm.addEventListener('submit', function(e) {
+            const submitBtn = this.querySelector('button[type="submit"]');
+            
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Submitting...';
+            }
+            
+            // After form submits to Google Sheets via hidden iframe
+            setTimeout(() => {
+                // Show success message
+                const successMsg = document.getElementById('successMsg');
+                if (successMsg) {
+                    successMsg.style.display = 'block';
+                }
+                
+                // Reset form
+                this.reset();
+                
+                // Re-enable submit button
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Submit Application';
+                }
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    if (successMsg) {
+                        successMsg.style.display = 'none';
+                    }
+                }, 5000);
+            }, 800);
+        });
+    }
+});
+
+/* ==========================================
+   FRANCHISE FORM - SUCCESS & RESET
+   ========================================== */
+
+document.addEventListener('DOMContentLoaded', function() {
+    const franchiseForm = document.getElementById('franchiseform');
+    
+    if (franchiseForm) {
+        franchiseForm.addEventListener('submit', function(e) {
+            const submitBtn = this.querySelector('button[type="submit"]');
+            
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Submitting...';
+            }
+            
+            // After form submits to Google Sheets via hidden iframe
+            setTimeout(() => {
+                // Show success message
+                const successMsg = document.getElementById('successMsg');
+                if (successMsg) {
+                    successMsg.style.display = 'block';
+                }
+                
+                // Reset form
+                this.reset();
+                
+                // Re-enable submit button
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Submit Franchise Application';
+                }
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    if (successMsg) {
+                        successMsg.style.display = 'none';
+                    }
+                }, 5000);
+            }, 800);
+        });
+    }
+});
+
 
 
 
